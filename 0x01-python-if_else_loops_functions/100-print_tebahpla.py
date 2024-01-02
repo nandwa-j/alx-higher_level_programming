@@ -1,7 +1,3 @@
 #!/usr/bin/python3
-for a in reversed(range(97, 123)):
-    result = f"{chr(a if (a % 2 == 0) else (a - 32))}"
-    print(result, end='')
-
-print()
-
+for ch in reversed(range(97, 123)):
+    print(f"{(ch if (ch % 2 == 0) else (ch - 32)), end='')"})

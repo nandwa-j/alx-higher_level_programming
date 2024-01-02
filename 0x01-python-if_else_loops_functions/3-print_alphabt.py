@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-for a in range(97, 123):
-        if a != 101 and a != 113:
-                print(f"{a}", end='')
+for char in range(97, 123):
+        if char != 101 and char != 113:
+                print(f"{char}", end='')

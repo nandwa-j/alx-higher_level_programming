@@ -1,7 +1,9 @@
 #!/usr/bin/python3
-def uppercase(s):
-    result = ""
-    for char in s:
-        num = 32 if 'a' <= char <= 'z' else 0
-        result += f"{chr(ord(char) - num)}"
-    print(result)
+def uppercase(str):
+    for i in range(len(str)):
+        if ord(str[i]) >= 97 and ord(str[i]) <= 122:
+            num = 32
+        else:
+            num = 0
+        print(f"{(ord(str[i]) - num)}", end='')
+    print()
