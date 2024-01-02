@@ -1,9 +1,4 @@
 #!/usr/bin/python3
-def print_last_digit(number):
-    if number >= 0:
-        last_digit = number % 10
-    else:
-        last_digit = -number % 10
-
-    print(f"{l_digit}", end='')
-    return (last_digit)
+print(*(', '.join(
+    "{}{}".format(tens, ones) for ones in range(tens+1, 10)
+    ) for tens in range(9)), sep=', ')

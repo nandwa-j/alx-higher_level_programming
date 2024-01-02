@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-for num in range(0, 99):
-    print(f"{num} = 0x{num}")
+print(*("{} = {:#x}".format(i, i) for i in range(99)), sep='\n')
+
 
