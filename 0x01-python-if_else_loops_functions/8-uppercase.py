@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-
-def uppercase(s):
-    """Prints a string in uppercase (followed by a newline)"""
-    print(f"{s.translate({(c | 32): c for c in range(ord('A'), ord('Z') + 1)})}")
+def uppercase(str):
+    for s in str:
+        if ord(s) in range(97, 123):
+            i = ord(s) - 32
+        else:
+            i = ord(s)
+        print("{:c}".format(i), end='')
+    print("")

@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-print(*(', '.join(
-    "{}{}".format(tens, ones) for ones in range(tens+1, 10)
-    ) for tens in range(9)), sep=', ')
+
+for i in range(0, 9):
+    for j in range(i + 1, 10):
+        if i != 8:
+            print("{:d}{:d}".format(i, j), end=', ')
+        else:
+            print("{:d}{:d}".format(i, j))
 
