@@ -1,4 +1,7 @@
 #!/usr/bin/python3
-print(*(', '.join(
-    "{}{}".format(tens, ones) for ones in range(tens+1, 10)
-    ) for tens in range(9)), sep=', ')
+
+def print_last_digit(number):
+    """Prints the last digit of a number"""
+    last_digit = abs(number) % 10
+    print(last_digit)
+
