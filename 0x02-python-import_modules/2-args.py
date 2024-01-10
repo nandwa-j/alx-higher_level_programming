@@ -1,15 +1,14 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
     import sys
-    i = len(sys.argv) - 1
 
-    if i == 0:
-        print(f"{i} arguments.")
-    elif i == 1:
-        print(f"{i} argument:")
+    count = len(sys.arv) - 1
+    if count == 0:
+        print("0 arguments.")
+    elif count == 1:
+        print("1 argument.")
     else:
-        print(f"{i} arguments:")
+        print("{} arguments:".format(count))
 
-    if i >= 1:
-        for i in range(1, i + 1):
-            print(f"{i}: {sys.argv[i]}")
+    for i in range(count):
+            print("{}: {}".format(i + 1, sys.argv[i + 1])))
