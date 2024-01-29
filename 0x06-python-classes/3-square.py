@@ -27,4 +27,3 @@ class Square:
         A method that calculates the area of a square
         """
         return (self.__size ** 2)
-
