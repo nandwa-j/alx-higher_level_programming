@@ -1,21 +1,28 @@
 #!/usr/bin/python3
+""" Define a magicclass that does exactly as the bytecode provided """
+
+
 import math
 
 
 class MagicClass:
 
-    """Stores the properties
-    of a circumference"""
+    """Stores the properties of a circumference"""
+
     def __init__(self, radius=0):
+        """initialize a MagicClass.
+        Arg:
+            radius(float or int): the radius of the new MagicClass
+        """
         self.__radius = 0
         if type(radius) is not int and type(radius) is not float:
             raise TypeError('radius must be a number')
         self.__radius = radius
 
-    """ Circumfrence """
     def area(self):
+        """Return the area of the MagicClass. """
         return ((self.__radius ** 2) * math.pi)
 
-    """ The perimeter of a circumference """
     def circumference(self):
-    return 2 * math.pi * self.__radius
+        """ Return the circumfrence of the MagicClass."""
+        return 2 * math.pi * self.__radius

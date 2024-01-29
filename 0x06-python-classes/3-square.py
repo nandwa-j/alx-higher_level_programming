@@ -1,12 +1,13 @@
 #!/usr/bin/python3
-"""A module that defines a square by its size """
+"""A module that defines a square by its size"""
 
 
 class Square:
     """A class that represents a square"""
 
     def __init__(self, size=0):
-        """Method to initialize the square class
+        """
+        Method to initialize the square class
         Arguments:
             size: the size of the square
         Raises:
@@ -22,7 +23,8 @@ class Square:
         self.__size = size
 
     def area(self):
-         """ A method that calculates the area of a square
+        """
+        A method that calculates the area of a square
         """
         return (self.__size ** 2)
 
