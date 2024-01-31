@@ -62,5 +62,5 @@ class Rectangle:
         rectangle = ""
         if self.__width != 0 and self.__height != 0:
             rectangle += "\n".join("#" * self.__width
-                                   for j in range(self.__height)) + "\n"
+                                   for j in range(self.__height))
         return rectangle

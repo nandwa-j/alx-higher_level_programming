@@ -56,7 +56,7 @@ class Rectangle:
         rectangle = ""
         if self.__width != 0 or self.__height != 0:
             rectangle += "\n".join("#" * self.__width
-                                   for j in range(self.__height)) + "\n"
+                                   for j in range(self.__height))
         return rectangle
 
     def __repr__(self):
