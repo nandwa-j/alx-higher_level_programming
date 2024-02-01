@@ -1,0 +1,128 @@
+The ``3-say_my_name`` Module
+============================
+
+Using the ``say_my_name`` function
+==================================
+
+Usage:
+=====
+
+::
+
+Importing the ``say_my_name`` function.
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Begin tests.
+
+::
+
+Test if first name is a string:
+
+    >>> say_my_name(100, "Tom")
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+::
+
+Test if last name is a string:
+
+    >>> say_my_name("Ade", (10, 10))
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
+
+::
+
+Test if function displays the strings well in the message:
+
+    >>> say_my_name("John", "Doe")
+    My name is John Doe
+
+    >>> say_my_name("Jane", "Doe")
+    My name is Jane Doe
+
+    >>> say_my_name("Alice")
+    My name is Alice 
+
+::
+
+checking for module docstring
+::
+        >>> module_docstring = __import__("3-say_my_name").__doc__
+        >>> len(module_docstring) > 5
+        True
+
+checking function docstring for module
+::
+        >>> function_docstring = say_my_name.__doc__
+        >>> len(function_docstring) > 5
+        True
+
+checking regular functionality when both first name and last name are provided
+::
+        >>> say_my_name("John", "Smith")
+        My name is John Smith
+        >>> say_my_name('Alice', 'Wonderland')
+        My name is Alice Wonderland
+
+checking when only the first name is provided
+::
+        >>> say_my_name("John")
+        My name is John 
+        >>> say_my_name("Alice")
+        My name is Alice 
+
+checking when only the last name is provided
+::
+        >>> say_my_name(last_name="Smith")
+        Traceback (most recent call last):
+        TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+checking when no arguments are provided
+::
+        >>> say_my_name()
+        Traceback (most recent call last):
+        TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+checking when an incorrect type is provided for first_name
+::
+        >>> say_my_name(13)
+        Traceback (most recent call last):
+        TypeError: first_name must be a string
+        >>> say_my_name(19.39)
+        Traceback (most recent call last):
+        TypeError: first_name must be a string
+        >>> say_my_name(['John', 'Chris'], 'Alex')
+        Traceback (most recent call last):
+        TypeError: first_name must be a string
+        >>> say_my_name({'Amy': 13}, "Alex")
+        Traceback (most recent call last):
+        TypeError: first_name must be a string
+
+checking when an incorrect type is provided for last_name
+::
+        >>> say_my_name("Valentine", 23)
+        Traceback (most recent call last):
+        TypeError: last_name must be a string
+        >>> say_my_name("Valentine", ["Alex", "John"])
+        Traceback (most recent call last):
+        TypeError: last_name must be a string
+        >>> say_my_name("Hitman", 47.70)
+        Traceback (most recent call last):
+        TypeError: last_name must be a string
+        >>> say_my_name("Valentine",{"Hitman": 47})
+        Traceback (most recent call last):
+        TypeError: last_name must be a string
+
+checking when None is passed
+::
+        >>> say_my_name("Valentine", None)
+        Traceback (most recent call last):
+        TypeError: last_name must be a string
+        >>> say_my_name(None)
+        Traceback (most recent call last):
+        TypeError: first_name must be a string
+
+::
