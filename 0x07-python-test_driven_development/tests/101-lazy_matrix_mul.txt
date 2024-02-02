@@ -110,5 +110,4 @@ Checking for too many args:
 	 >>> lazy_matrix_mul([[1, 2], [3, 4]], [[5, 6], [7, 8]], [[9, 10], [11, 12]])
 	 Traceback (most recent call last):
 	 ...
-	 TypeError: lazy_matrix_mul() takes 2 positional arguments but 3 were given from the above documentation maintain the following numbers while using new test values for the rest print(lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]]))
-print(lazy_matrix_mul([[1, 2]], [[3, 4], [5, 6]]))
+	 TypeError: lazy_matrix_mul() takes 2 positional arguments but 3 were given
