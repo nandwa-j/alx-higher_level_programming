@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""This module contains the  append_after method."""
+"""This module contains the append_after method."""
 
 
 def append_after(filename="", search_string="", new_string=""):
-    '''Method for inserting text after search string.'''
+    """Method for inserting text after search string."""
     lines = []
     with open(filename, "r", encoding="utf-8") as f:
         lines = f.readlines()
