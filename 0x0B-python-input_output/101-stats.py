@@ -31,4 +31,3 @@ if __name__ == "__main__":
             if codes[code] != 0:
                 print("{}: {}".format(code, codes[code]))
         raise
-
